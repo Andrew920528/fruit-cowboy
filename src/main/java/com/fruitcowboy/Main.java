@@ -13,20 +13,22 @@ public class Main extends PApplet {
 
     @Override
     public void setup() {
-        gameManager = new GameManager();
-        gameManager.setup(this);
+        // gameManager = new GameManager();
+        // gameManager.setup(this);
+        background(0, 0, 100);
+        circle(400, 300, 500);
     }
 
     @Override
     public void draw() {
-        background(30);
-        gameManager.update();
-        gameManager.draw(this);
+        // background(30);
+        // gameManager.update();
+        // gameManager.draw(this);
     }
 
     @Override
     public void mousePressed() {
-        gameManager.handleClick(mouseX, mouseY);
+        // gameManager.handleClick(mouseX, mouseY);
     }
 
     public static void main(String[] args) {
