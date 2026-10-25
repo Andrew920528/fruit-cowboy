@@ -4,7 +4,7 @@ import com.fruitcowboy.GameManager;
 
 import processing.core.PApplet;
 
-public class Main extends PApplet {
+public class Maincopy extends PApplet {
 
     private GameManager gameManager;
     private int x;
