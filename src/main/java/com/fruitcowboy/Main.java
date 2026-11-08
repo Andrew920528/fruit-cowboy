@@ -2,13 +2,18 @@ package com.fruitcowboy;
 
 import processing.core.PApplet;
 
-import com.fruitcowboy.fruits.Fruit;
+import com.fruitcowboy.fruits.NormalFruit;
 
 public class Main extends PApplet {
 
     private GameManager gameManager;
     private float x, y, vx, vy, initvy;
-    private Fruit normalFruit;
+    private NormalFruit normalFruit1;
+    private NormalFruit normalFruit2;
+    private NormalFruit normalFruit3;
+    private NormalFruit normalFruit4;
+    private NormalFruit normalFruit5;
+    private NormalFruit normalFruit6;
 
     @Override
     public void settings() {
@@ -17,6 +22,7 @@ public class Main extends PApplet {
 
     @Override
     public void setup() {
+        Util.init(this);
         // gameManager = new GameManager();
         // gameManager.setup(this);
         background(100);
@@ -27,7 +33,8 @@ public class Main extends PApplet {
         vx = 2;
         vy = 18;
         initvy = 18;
-        normalFruit = new Fruit(50, 800, 2, 18, 0.3f, 100);
+        normalFruit1 = new NormalFruit(50, 800, 2, 18, 0.3f, 90, "data/fruits/fruit1.png");
+        normalFruit2 = new NormalFruit(250, 800, -3, 21, 0.4f, 40, "data/fruits/fruit2.jpg");
     }
 
     @Override
@@ -43,7 +50,8 @@ public class Main extends PApplet {
             initvy -= 1;
             vy = initvy;
         }
-        normalFruit.move(this);
+        normalFruit1.move(this);
+        normalFruit2.move(this);
     }
 
     @Override
