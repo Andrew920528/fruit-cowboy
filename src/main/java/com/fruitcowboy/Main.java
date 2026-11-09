@@ -18,14 +18,15 @@ public class Main extends PApplet {
 
     @Override
     public void setup() {
+        Util.init(this);
         x = 200;
         y = 300;
         vy = 15;
         // gameManager = new GameManager();
         // gameManager.setup(this);
-        f1 = new NormalFruit(200, 300, 3, 15, 0.5f);
-        f2 = new NormalFruit(600, 400, -4, 25, 0.9f);
-        f3 = new NormalFruit(100, 200, 2, 5, 0.3f);
+        f1 = new NormalFruit(200, 300, 3, 15, 0.5f, "data/fruits/kiwi.png", 45);
+        f2 = new NormalFruit(600, 400, -4, 25, 0.9f, "data/fruits/coconut.png", 51);
+        f3 = new NormalFruit(100, 200, 2, 5, 0.3f, "data/fruits/GreenApple.png", 45);
     }
 
     @Override
