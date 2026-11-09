@@ -1,5 +1,7 @@
 package com.fruitcowboy;
 
+import com.fruitcowboy.fruits.NormalFruit;
+
 import processing.core.PApplet;
 
 public class Main extends PApplet {
@@ -8,6 +10,7 @@ public class Main extends PApplet {
     float x;
     float y;
     float vy;
+    private NormalFruit f1, f2, f3;
     @Override
     public void settings() {
         size(800, 600);
@@ -20,6 +23,9 @@ public class Main extends PApplet {
         vy = 15;
         // gameManager = new GameManager();
         // gameManager.setup(this);
+        f1 = new NormalFruit(200, 300, 3, 15, 0.5f);
+        f2 = new NormalFruit(600, 400, -4, 25, 0.9f);
+        f3 = new NormalFruit(100, 200, 2, 5, 0.3f);
     }
 
     @Override
@@ -28,10 +34,9 @@ public class Main extends PApplet {
         // background(30);
         // gameManager.update();
         // gameManager.draw(this);
-        x+= 2;
-        y-= vy;
-        vy = vy-0.5f;
-        circle(x, y, 60);
+        f1.move(this);
+        f2.move(this);
+        f3.move(this);
     }
 
     @Override
